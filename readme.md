@@ -1,4 +1,4 @@
-# Battery Performance Prediction
+# Lithium-ion_battery_SOH_Prediction
 
 This project implements machine learning models to predict critical battery performance metrics (State of Charge and State of Health) using NASA's lithium-ion battery dataset.
 
