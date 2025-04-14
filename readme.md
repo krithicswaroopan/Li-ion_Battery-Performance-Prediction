@@ -98,7 +98,7 @@ The project implements two different approaches for battery performance predicti
 ### Battery Capacity Degradation
 The graph below shows the degradation trend of four battery units (B0005, B0006, B0007, B0018) across several cycles. As seen, the capacity decreases progressively as the number of cycles increases, which is typical of lithium-ion battery aging.
 
-![Battery Capacity Degradation](notebooks\capacity_degradation.png)
+![Battery Capacity Degradation](notebooks/capacity_degradation.png)
 
 ### Model Performance Comparison
 Two models were evaluated for predicting battery state of health:
@@ -112,7 +112,7 @@ Performance metrics used:
 
 The bar plots below summarize the performance. XGBoost outperforms LSTM in all metrics:
 
-![Model Comparison](notebooks\model_comparison.png)
+![Model Comparison](notebooks/model_comparison.png)
 
 ### Model Prediction Analysis
 The scatter plots compare predicted vs actual SOH values for the two models:
@@ -122,7 +122,7 @@ The scatter plots compare predicted vs actual SOH values for the two models:
 
 XGBoost predictions lie very close to the diagonal, indicating higher accuracy, while LSTM predictions show greater deviation from the ideal line.
 
-![Model Predictions](notebooks\model_predictions.png)
+![Model Predictions](notebooks/model_predictions.png)
 
 ### 💡 Conclusion
 - Battery capacity degrades steadily over cycling, with unit B0018 showing the steepest decline.
