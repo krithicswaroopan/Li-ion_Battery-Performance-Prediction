@@ -95,7 +95,39 @@ The project implements two different approaches for battery performance predicti
 
 ## Results
 
-The models predict battery State of Health (SOH) with high accuracy, enabling reliable estimation of remaining useful life for lithium-ion batteries. The comparison between LSTM and XGBoost approaches provides insights into the advantages of each method for battery performance prediction.
+### Battery Capacity Degradation
+The graph below shows the degradation trend of four battery units (B0005, B0006, B0007, B0018) across several cycles. As seen, the capacity decreases progressively as the number of cycles increases, which is typical of lithium-ion battery aging.
+
+![Battery Capacity Degradation](./capacity_degradation.png)
+
+### Model Performance Comparison
+Two models were evaluated for predicting battery state of health:
+- **LSTM (Long Short-Term Memory) Network**
+- **XGBoost (Extreme Gradient Boosting)**
+
+Performance metrics used:
+- **MSE (Mean Squared Error)**
+- **MAE (Mean Absolute Error)**
+- **R² Score**
+
+The bar plots below summarize the performance. XGBoost outperforms LSTM in all metrics:
+
+![Model Comparison](./model_comparison.png)
+
+### Model Prediction Analysis
+The scatter plots compare predicted vs actual SOH values for the two models:
+
+- **Left:** XGBoost Predictions
+- **Right:** LSTM Predictions
+
+XGBoost predictions lie very close to the diagonal, indicating higher accuracy, while LSTM predictions show greater deviation from the ideal line.
+
+![Model Predictions](./model_predictions.png)
+
+### 💡 Conclusion
+- Battery capacity degrades steadily over cycling, with unit B0018 showing the steepest decline.
+- XGBoost significantly outperforms LSTM for SOH prediction in terms of error and fit.
+- Predictive modeling is a strong tool for forecasting battery health and optimizing maintenance cycles.
 
 ## Dependencies
 
